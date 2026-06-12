@@ -1,0 +1,142 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+Our Fleet
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">Our Fleet</h1>
+        <p class="text-muted fs-5">
+            Explore our premium collection of luxury and performance vehicles.
+        </p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- BMW M4 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow border-0">
+                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e"
+                     class="card-img-top vehicle-img"
+                     alt="BMW M4">
+
+                <div class="card-body">
+                    <h5 class="card-title">BMW M4</h5>
+                    <p class="card-text">
+                        Luxury performance coupe with exceptional handling and power.
+                    </p>
+                    <a href="#" class="btn btn-dark w-100">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Audi RS7 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow border-0">
+                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7"
+                     class="card-img-top vehicle-img"
+                     alt="Audi RS7">
+
+                <div class="card-body">
+                    <h5 class="card-title">Audi RS7</h5>
+                    <p class="card-text">
+                        Premium sports sedan with stunning performance and comfort.
+                    </p>
+                    <a href="#" class="btn btn-dark w-100">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mercedes AMG -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow border-0">
+                <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a"
+                     class="card-img-top vehicle-img"
+                     alt="Mercedes AMG">
+
+                <div class="card-body">
+                    <h5 class="card-title">Mercedes AMG</h5>
+                    <p class="card-text">
+                        A perfect blend of luxury, innovation, and performance.
+                    </p>
+                    <a href="#" class="btn btn-dark w-100">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ferrari 488 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow border-0">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70"
+                     class="card-img-top vehicle-img"
+                     alt="Ferrari 488">
+
+                <div class="card-body">
+                    <h5 class="card-title">Ferrari 488</h5>
+                    <p class="card-text">
+                        An iconic Italian supercar delivering breathtaking speed and style.
+                    </p>
+                    <a href="#" class="btn btn-dark w-100">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lamborghini Huracan -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow border-0">
+                <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b"
+                     class="card-img-top vehicle-img"
+                     alt="Lamborghini Huracan">
+
+                <div class="card-body">
+                    <h5 class="card-title">Lamborghini Huracan</h5>
+                    <p class="card-text">
+                        Aggressive styling and thrilling performance for true enthusiasts.
+                    </p>
+                    <a href="#" class="btn btn-dark w-100">View Details</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+.vehicle-img{
+    height: 250px;
+    object-fit: cover;
+}
+
+.card{
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.btn{
+    border-radius: 25px;
+}
+
+@media (max-width:768px){
+
+    .vehicle-img{
+        height:220px;
+    }
+
+    h1{
+        font-size:2rem;
+    }
+}
+</style>
+
+{% endblock %}
+

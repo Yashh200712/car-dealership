@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="bg-dark text-white py-5">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">Elite Motor Services</h1>
+        <p class="lead mt-3">
+            Delivering exceptional vehicle sales, financing, maintenance, and customer support.
+        </p>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="container py-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">What We Offer</h2>
+        <p class="text-muted">
+            Complete automotive solutions tailored to your needs.
+        </p>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body text-center p-4">
+                    <h3 class="mb-3">🚗 New Vehicle Sales</h3>
+                    <p class="text-muted">
+                        Explore our extensive collection of premium and luxury vehicles.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body text-center p-4">
+                    <h3 class="mb-3">🔄 Trade-In Services</h3>
+                    <p class="text-muted">
+                        Get the best value for your current vehicle with our exchange program.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body text-center p-4">
+                    <h3 class="mb-3">💰 Financing Options</h3>
+                    <p class="text-muted">
+                        Flexible financing plans with quick approvals and low-interest rates.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body text-center p-4">
+                    <h3 class="mb-3">🛠 Maintenance & Repairs</h3>
+                    <p class="text-muted">
+                        Expert technicians providing reliable service and genuine parts.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body text-center p-4">
+                    <h3 class="mb-3">🛡 Extended Warranty</h3>
+                    <p class="text-muted">
+                        Protect your investment with comprehensive warranty coverage.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body text-center p-4">
+                    <h3 class="mb-3">📞 Customer Support</h3>
+                    <p class="text-muted">
+                        Dedicated assistance before, during, and after your purchase.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row text-center">
+
+            <div class="col-md-3">
+                <h2 class="fw-bold text-primary">5000+</h2>
+                <p>Vehicles Sold</p>
+            </div>
+
+            <div class="col-md-3">
+                <h2 class="fw-bold text-primary">2500+</h2>
+                <p>Happy Customers</p>
+            </div>
+
+            <div class="col-md-3">
+                <h2 class="fw-bold text-primary">10+</h2>
+                <p>Years Experience</p>
+            </div>
+
+            <div class="col-md-3">
+                <h2 class="fw-bold text-primary">24/7</h2>
+                <p>Customer Support</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold">Ready to Find Your Dream Car?</h2>
+        <p class="lead">
+            Contact our team today and let us help you drive home in your perfect vehicle.
+        </p>
+        <a href="{% url 'contact' %}" class="btn btn-light btn-lg mt-3">
+            Contact Us
+        </a>
+    </div>
+</section>
+
+{% endblock %}
