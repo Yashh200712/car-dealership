@@ -1,4 +1,4 @@
-
+```html
 {% extends 'base.html' %}
 
 {% block title %}
@@ -9,74 +9,87 @@ Elite Motor Dashboard
 
 <div class="container py-5">
 
-    <!-- Welcome Banner -->
-    <div class="card dashboard-banner border-0 shadow-lg mb-5">
-        <div class="card-body p-5">
-            <h1 class="fw-bold text-white">
-                Welcome Back, {{ request.user.username }} 👋
-            </h1>
+    <!-- HERO DASHBOARD -->
+    <div class="dashboard-banner shadow-lg mb-5">
+        <div class="row align-items-center p-5">
 
-            <p class="text-light fs-5">
-                Manage your vehicles, enquiries, bookings and account from one place.
-            </p>
+            <div class="col-lg-8">
+
+                <span class="badge bg-warning text-dark mb-3">
+                    Premium Member
+                </span>
+
+                <h1 class="text-white fw-bold">
+                    Welcome Back, {{ request.user.username }} 👋
+                </h1>
+
+                <p class="text-light fs-5">
+                    Manage your account, enquiries, bookings and favorite vehicles
+                    from your personalized dashboard.
+                </p>
+
+            </div>
+
+            <div class="col-lg-4 text-center">
+
+                <img src="https://ui-avatars.com/api/?name={{ request.user.username }}&background=f59e0b&color=ffffff&size=180"
+                     class="avatar-img">
+
+            </div>
+
         </div>
     </div>
 
-    <!-- Statistics -->
+    <!-- STATS -->
+
     <div class="row g-4 mb-5">
 
         <div class="col-md-3">
-            <div class="card stat-card shadow border-0">
-                <div class="card-body text-center">
-                    <h1>🚗</h1>
-                    <h3 class="fw-bold">12</h3>
-                    <p class="text-muted">Vehicles Viewed</p>
-                </div>
+            <div class="stat-card stat-blue">
+                <h1>🚗</h1>
+                <h2>12</h2>
+                <p>Vehicles Viewed</p>
             </div>
         </div>
 
         <div class="col-md-3">
-            <div class="card stat-card shadow border-0">
-                <div class="card-body text-center">
-                    <h1>📩</h1>
-                    <h3 class="fw-bold">5</h3>
-                    <p class="text-muted">Enquiries</p>
-                </div>
+            <div class="stat-card stat-green">
+                <h1>📩</h1>
+                <h2>5</h2>
+                <p>Enquiries</p>
             </div>
         </div>
 
         <div class="col-md-3">
-            <div class="card stat-card shadow border-0">
-                <div class="card-body text-center">
-                    <h1>⭐</h1>
-                    <h3 class="fw-bold">3</h3>
-                    <p class="text-muted">Favorites</p>
-                </div>
+            <div class="stat-card stat-gold">
+                <h1>⭐</h1>
+                <h2>3</h2>
+                <p>Favorites</p>
             </div>
         </div>
 
         <div class="col-md-3">
-            <div class="card stat-card shadow border-0">
-                <div class="card-body text-center">
-                    <h1>🛠️</h1>
-                    <h3 class="fw-bold">2</h3>
-                    <p class="text-muted">Service Requests</p>
-                </div>
+            <div class="stat-card stat-red">
+                <h1>🛠️</h1>
+                <h2>2</h2>
+                <p>Service Requests</p>
             </div>
         </div>
 
     </div>
 
+    <!-- PROFILE + ACTIVITY -->
+
     <div class="row">
 
-        <!-- Profile -->
         <div class="col-lg-4 mb-4">
 
-            <div class="card shadow border-0 profile-card">
+            <div class="card border-0 shadow profile-card">
+
                 <div class="card-body text-center">
 
-                    <img src="https://ui-avatars.com/api/?name={{ request.user.username }}&background=111827&color=ffffff&size=150"
-                         class="rounded-circle mb-3">
+                    <img src="https://ui-avatars.com/api/?name={{ request.user.username }}&background=111827&color=ffffff&size=180"
+                         class="profile-img mb-3">
 
                     <h4>{{ request.user.username }}</h4>
 
@@ -84,21 +97,34 @@ Elite Motor Dashboard
                         {{ request.user.email }}
                     </p>
 
-                    <button class="btn btn-dark w-100">
+                    <hr>
+
+                    <p>
+                        <strong>Member Status:</strong>
+                        Premium
+                    </p>
+
+                    <p>
+                        <strong>Account Type:</strong>
+                        Customer
+                    </p>
+
+                    <a href="#"
+                       class="btn btn-warning w-100">
                         Edit Profile
-                    </button>
+                    </a>
 
                 </div>
+
             </div>
 
         </div>
 
-        <!-- Activity -->
         <div class="col-lg-8">
 
-            <div class="card shadow border-0">
+            <div class="card border-0 shadow activity-card">
 
-                <div class="card-header bg-dark text-white">
+                <div class="card-header">
                     Recent Activity
                 </div>
 
@@ -107,19 +133,23 @@ Elite Motor Dashboard
                     <ul class="list-group list-group-flush">
 
                         <li class="list-group-item">
-                            🚗 Viewed BMW M4
+                            🚗 Viewed BMW M4 Competition
                         </li>
 
                         <li class="list-group-item">
-                            📩 Submitted an enquiry
+                            📩 Submitted enquiry for Audi RS7
                         </li>
 
                         <li class="list-group-item">
-                            ⭐ Added Audi RS7 to favorites
+                            ⭐ Added Mercedes AMG GT to wishlist
                         </li>
 
                         <li class="list-group-item">
-                            🛠️ Requested vehicle service
+                            🛠️ Scheduled service appointment
+                        </li>
+
+                        <li class="list-group-item">
+                            📞 Contacted customer support
                         </li>
 
                     </ul>
@@ -132,31 +162,40 @@ Elite Motor Dashboard
 
     </div>
 
-    <!-- Quick Actions -->
-    <div class="card shadow border-0 mt-5">
+    <!-- QUICK ACTIONS -->
 
-        <div class="card-header bg-warning fw-bold">
-            Quick Actions
+    <h2 class="fw-bold mt-5 mb-4">
+        Quick Actions
+    </h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-3">
+            <a href="{% url 'fleet' %}" class="quick-action">
+                <h1>🚗</h1>
+                <h5>Browse Fleet</h5>
+            </a>
         </div>
 
-        <div class="card-body text-center">
-
-            <a href="{% url 'fleet' %}" class="btn btn-dark m-2">
-                Browse Fleet
+        <div class="col-md-3">
+            <a href="{% url 'services' %}" class="quick-action">
+                <h1>🛠️</h1>
+                <h5>Book Service</h5>
             </a>
+        </div>
 
-            <a href="{% url 'services' %}" class="btn btn-warning m-2">
-                Book Service
+        <div class="col-md-3">
+            <a href="{% url 'contact' %}" class="quick-action">
+                <h1>📞</h1>
+                <h5>Support</h5>
             </a>
+        </div>
 
-            <a href="{% url 'contact' %}" class="btn btn-primary m-2">
-                Contact Support
+        <div class="col-md-3">
+            <a href="{% url 'logout_view' %}" class="quick-action">
+                <h1>🚪</h1>
+                <h5>Logout</h5>
             </a>
-
-            <a href="{% url 'logout_view' %}" class="btn btn-danger m-2">
-                Logout
-            </a>
-
         </div>
 
     </div>
@@ -166,34 +205,87 @@ Elite Motor Dashboard
 <style>
 
 .dashboard-banner{
-    background: linear-gradient(135deg,#111827,#1f2937);
+    background:linear-gradient(135deg,#0F172A,#1E293B);
+    border-radius:25px;
+    overflow:hidden;
+}
+
+.avatar-img{
+    width:150px;
+    border-radius:50%;
+    border:5px solid #F59E0B;
 }
 
 .stat-card{
-    transition: all 0.3s ease;
+    color:white;
+    text-align:center;
+    padding:30px;
+    border-radius:20px;
+    transition:.3s;
 }
 
 .stat-card:hover{
-    transform: translateY(-10px);
+    transform:translateY(-10px);
+}
+
+.stat-blue{
+    background:linear-gradient(135deg,#2563EB,#3B82F6);
+}
+
+.stat-green{
+    background:linear-gradient(135deg,#059669,#10B981);
+}
+
+.stat-gold{
+    background:linear-gradient(135deg,#D97706,#F59E0B);
+}
+
+.stat-red{
+    background:linear-gradient(135deg,#DC2626,#EF4444);
 }
 
 .profile-card{
-    transition: all 0.3s ease;
+    border-radius:20px;
 }
 
-.profile-card:hover{
-    transform: translateY(-10px);
+.profile-img{
+    width:130px;
+    border-radius:50%;
+    border:4px solid #F59E0B;
 }
 
-.btn{
-    border-radius: 30px;
+.activity-card{
+    border-radius:20px;
 }
 
-.card{
-    border-radius: 15px;
+.activity-card .card-header{
+    background:#0F172A;
+    color:white;
+    font-weight:bold;
+}
+
+.quick-action{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    color:#111827;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.quick-action:hover{
+    transform:translateY(-10px);
+    color:#F59E0B;
+}
+
+.list-group-item{
+    padding:15px;
 }
 
 </style>
 
 {% endblock %}
-
+```

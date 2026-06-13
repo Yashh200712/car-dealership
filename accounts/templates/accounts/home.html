@@ -1,48 +1,106 @@
-
 {% extends 'base.html' %}
 
 {% block title %}
-Elite Motor | Home
+Elite Motor | Premium Car Dealership
 {% endblock %}
 
 {% block content %}
 
-<!-- Hero Section -->
-<section class="bg-dark text-white py-5">
-    <div class="container">
-        <div class="row align-items-center">
+<!-- HERO SECTION -->
 
-            <div class="col-lg-6">
-                <h1 class="display-3 fw-bold">
-                    Drive Your Dream Car
+<section class="hero-section">
+    <div class="hero-overlay">
+        <div class="container">
+            <div class="row min-vh-100 align-items-center">
+
+```
+            <div class="col-lg-7 text-white">
+
+                <span class="badge bg-warning text-dark mb-3">
+                    #1 Premium Car Dealer
+                </span>
+
+                <h1 class="display-2 fw-bold">
+                    Drive Beyond Expectations
                 </h1>
 
                 <p class="lead mt-4">
-                    Welcome to Elite Motor — your trusted destination for premium vehicles,
-                    exceptional service, and hassle-free car ownership.
+                    Discover luxury, performance, and reliability.
+                    Explore our exclusive collection of premium vehicles
+                    tailored to your lifestyle.
                 </p>
 
-                <a href="{% url 'services' %}" class="btn btn-warning btn-lg me-2">
-                    Explore Services
-                </a>
+                <div class="mt-4">
+                    <a href="{% url 'services' %}"
+                       class="btn btn-warning btn-lg me-3">
+                        Explore Services
+                    </a>
 
-                <a href="{% url 'contact' %}" class="btn btn-outline-light btn-lg">
-                    Contact Us
-                </a>
-            </div>
+                    <a href="{% url 'contact' %}"
+                       class="btn btn-outline-light btn-lg">
+                        Contact Us
+                    </a>
+                </div>
 
-            <div class="col-lg-6 text-center">
-                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70"
-                     alt="Luxury Car"
-                     class="img-fluid rounded shadow">
             </div>
 
         </div>
     </div>
+</div>
+```
+
 </section>
 
-<!-- Why Choose Us -->
-<section class="container py-5">
+<!-- STATISTICS -->
+
+<section class="py-5 bg-white">
+    <div class="container">
+
+```
+    <div class="row text-center g-4">
+
+        <div class="col-md-3">
+            <div class="stat-card">
+                <h2>1500+</h2>
+                <p>Cars Sold</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card">
+                <h2>98%</h2>
+                <p>Customer Satisfaction</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card">
+                <h2>250+</h2>
+                <p>Premium Vehicles</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card">
+                <h2>24/7</h2>
+                <p>Customer Support</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<section class="py-5 bg-light">
+
+```
+<div class="container">
+
     <div class="text-center mb-5">
         <h2 class="fw-bold">Why Choose Elite Motor?</h2>
         <p class="text-muted">
@@ -53,123 +111,211 @@ Elite Motor | Home
     <div class="row g-4">
 
         <div class="col-md-4">
-            <div class="card shadow border-0 h-100 text-center p-4">
-                <h1>🚗</h1>
+            <div class="feature-card">
+                <div class="icon">🚗</div>
                 <h4>Premium Vehicles</h4>
                 <p>
-                    Browse a wide range of luxury sedans, SUVs, and sports cars.
+                    Browse a wide range of luxury sedans,
+                    SUVs, and sports cars.
                 </p>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card shadow border-0 h-100 text-center p-4">
-                <h1>💰</h1>
+            <div class="feature-card">
+                <div class="icon">💰</div>
                 <h4>Easy Financing</h4>
                 <p>
-                    Flexible financing plans with competitive interest rates.
+                    Flexible financing plans with
+                    competitive interest rates.
                 </p>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card shadow border-0 h-100 text-center p-4">
-                <h1>🛠️</h1>
+            <div class="feature-card">
+                <div class="icon">🛠️</div>
                 <h4>Expert Service</h4>
                 <p>
-                    Professional maintenance and repair services by certified experts.
+                    Professional maintenance and repair
+                    services by certified experts.
                 </p>
             </div>
         </div>
 
     </div>
+
+</div>
+```
+
 </section>
 
-<!-- Statistics -->
-<section class="bg-light py-5">
-    <div class="container">
-        <div class="row text-center">
+<!-- FEATURED VEHICLE -->
 
-            <div class="col-md-3">
-                <h2 class="fw-bold text-warning">1500+</h2>
-                <p>Cars Sold</p>
-            </div>
+<section class="py-5">
 
-            <div class="col-md-3">
-                <h2 class="fw-bold text-warning">98%</h2>
-                <p>Customer Satisfaction</p>
-            </div>
+```
+<div class="container">
 
-            <div class="col-md-3">
-                <h2 class="fw-bold text-warning">5+</h2>
-                <p>Years Experience</p>
-            </div>
+    <div class="row align-items-center">
 
-            <div class="col-md-3">
-                <h2 class="fw-bold text-warning">24/7</h2>
-                <p>Customer Support</p>
-            </div>
+        <div class="col-lg-6">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7"
+                 alt="Luxury Car"
+                 class="img-fluid rounded-4 shadow">
+        </div>
+
+        <div class="col-lg-6">
+
+            <span class="text-warning fw-bold">
+                FEATURED VEHICLE
+            </span>
+
+            <h2 class="fw-bold mt-3">
+                Luxury Meets Performance
+            </h2>
+
+            <p class="lead text-muted">
+                Explore our latest collection of premium vehicles
+                engineered for comfort, style, and performance.
+            </p>
+
+            <a href="{% url 'fleet' %}"
+               class="btn btn-warning btn-lg">
+                View Inventory
+            </a>
 
         </div>
+
     </div>
+
+</div>
+```
+
 </section>
 
-<!-- Testimonials -->
-<section class="container py-5">
-    <div class="text-center mb-5">
-        <h2 class="fw-bold">Customer Reviews</h2>
-    </div>
+<!-- TESTIMONIAL -->
 
-    <div class="card shadow border-0 p-4">
-        <blockquote class="blockquote text-center">
-            <p>
-                "Elite Motor made buying my first luxury car incredibly easy.
-                Excellent service and amazing staff!"
-            </p>
-            <footer class="blockquote-footer">
-                Rahul Sharma
-            </footer>
-        </blockquote>
-    </div>
-</section>
+<section class="testimonial-section py-5">
 
-<!-- Call To Action -->
-<section class="bg-dark text-white py-5">
-    <div class="container text-center">
-        <h2 class="fw-bold">Ready to Find Your Dream Car?</h2>
-        <p class="lead">
-            Visit Elite Motor today and discover the perfect vehicle for your lifestyle.
+```
+<div class="container text-center text-white">
+
+    <h2 class="mb-4">
+        Customer Reviews
+    </h2>
+
+    <blockquote class="blockquote">
+
+        <p class="fs-4">
+            "Elite Motor made buying my dream car incredibly easy.
+            Excellent service and amazing staff!"
         </p>
 
-        <a href="{% url 'contact' %}" class="btn btn-warning btn-lg">
-            Get In Touch
-        </a>
-    </div>
+        <footer class="blockquote-footer text-light">
+            Rahul Sharma
+        </footer>
+
+    </blockquote>
+
+</div>
+```
+
+</section>
+
+<!-- CTA SECTION -->
+
+<section class="py-5 bg-warning">
+
+```
+<div class="container text-center">
+
+    <h2 class="fw-bold">
+        Ready To Find Your Dream Car?
+    </h2>
+
+    <p class="lead">
+        Visit Elite Motor today and discover the perfect
+        vehicle for your lifestyle.
+    </p>
+
+    <a href="{% url 'contact' %}"
+       class="btn btn-dark btn-lg">
+        Get In Touch
+    </a>
+
+</div>
+```
+
 </section>
 
 <style>
-.card{
-    transition: all 0.3s ease;
+
+.hero-section{
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)
+    ),
+    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
-.card:hover{
-    transform: translateY(-10px);
+.hero-overlay{
+    min-height:100vh;
+}
+
+.stat-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+}
+
+.stat-card h2{
+    color:#F59E0B;
+    font-weight:700;
+}
+
+.feature-card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+}
+
+.icon{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.testimonial-section{
+    background:#0F172A;
 }
 
 .btn{
-    border-radius: 30px;
-    font-weight: 600;
+    border-radius:30px;
+    font-weight:600;
 }
 
 img{
-    max-height: 450px;
-    object-fit: cover;
+    object-fit:cover;
 }
 
-section{
-    overflow: hidden;
-}
 </style>
 
 {% endblock %}
-```

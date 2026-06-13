@@ -13,12 +13,11 @@ class Enquiry(models.Model):
     def __str__(self):
         return self.name
 
-
 class Vehicle(models.Model):
     name = models.CharField(max_length=100)
     brand = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=12, decimal_places=2)
-    image = models.ImageField(upload_to='vehicles/')
+    image = models.URLField()
     description = models.TextField()
 
     def __str__(self):

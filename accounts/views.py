@@ -4,6 +4,33 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages         
 from .models import Enquiry
+from .models import Vehicle
+from django.shortcuts import render
+
+def vehicle_detail(request, pk):
+
+    vehicles = {
+        1: {
+            "name": "BMW M4",
+            "price": "₹1.50 Cr",
+            "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e",
+            "description": "Luxury performance coupe with exceptional handling and power."
+        },
+        2: {
+            "name": "Audi RS7",
+            "price": "₹2.20 Cr",
+            "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7",
+            "description": "Premium sports sedan with stunning performance and comfort."
+        }
+    }
+
+    vehicle = vehicles.get(pk)
+
+    return render(
+        request,
+        'accounts/vehicle_detail.html',
+        {'vehicle': vehicle}
+    )
 
 
 def home(request):
@@ -17,8 +44,10 @@ def services(request):
     return render(request, "accounts/service.html")
 
 def fleet(request):
-    return render(request, 'accounts/fleet.html')
-
+    vehicles = Vehicle.objects.all()
+    return render(request, 'accounts/fleet.html', {
+        'vehicles': vehicles
+    })
 
 def contact(request):
     if request.method == "POST":
