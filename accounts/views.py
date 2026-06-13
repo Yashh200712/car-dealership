@@ -16,11 +16,33 @@ def vehicle_detail(request, pk):
             "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e",
             "description": "Luxury performance coupe with exceptional handling and power."
         },
+
         2: {
             "name": "Audi RS7",
             "price": "₹2.20 Cr",
             "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7",
             "description": "Premium sports sedan with stunning performance and comfort."
+        },
+
+        3: {
+            "name": "Mercedes AMG",
+            "price": "₹1.80 Cr",
+            "image": "https://images.unsplash.com/photo-1502877338535-766e1452684a",
+            "description": "A perfect blend of luxury, innovation, and performance."
+        },
+
+        4: {
+            "name": "Ferrari 488",
+            "price": "₹3.50 Cr",
+            "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70",
+            "description": "An iconic Italian supercar delivering breathtaking speed and style."
+        },
+
+        5: {
+            "name": "Lamborghini Huracan",
+            "price": "₹4.00 Cr",
+            "image": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b",
+            "description": "Aggressive styling and thrilling performance for true enthusiasts."
         }
     }
 
@@ -31,7 +53,6 @@ def vehicle_detail(request, pk):
         'accounts/vehicle_detail.html',
         {'vehicle': vehicle}
     )
-
 
 def home(request):
     return render(request, "accounts/home.html")
